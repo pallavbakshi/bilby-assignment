@@ -1,3 +1,12 @@
+There are two ways to run the pipeline:
+
+1. Using Airflow (recommended)
+  - You need to have Docker and Python installed.
+  - You need to run Airflow and then trigger the DAG.
+    - You can use `bash start.sh` to quickly start Airflow.
+2. Using the individual pipeline steps
+  - This is best for development, testing, and debugging purposes.
+
 ## Airflow Setup
 
 First, git clone this repo.
