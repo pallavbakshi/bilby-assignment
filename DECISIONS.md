@@ -75,6 +75,21 @@ document_uuid, document_title_en, entity_text, entity_type, entity_start_pos, en
 extractor_confidence_score, is_matched, matched_sot_name, matched_sot_entity_type
 ```
 
+| Column                    | Type    | Description                                     |
+|----------------|---------|------------------------------------------------|
+| document_uuid             | str     | UUID of the document                            |
+| document_title_en         | str     | Title of the document (English)                 |
+| entity_text               | str     | The extracted entity mention                    |
+| entity_type               | str     | Entity label (Person, Company, Location)        |
+| entity_start_pos          | int     | Start character index document body_en       |
+| entity_end_pos            | int     | End character index document body_en         |
+| extractor_confidence_score| float   | Confidence score from GLiNER model              |
+| is_matched                | bool    | True if matched to SoT entity                   |
+| matched_sot_name          | str     | Name from SoT table (if matched, else empty)    |
+| matched_sot_entity_type   | str     | Entity type from SoT table (if matched, else empty) |
+
+
+
 Each row represents a single extracted entity mention with its document context and matching information:
 
 - **Document Relationship**: Maintained through `document_uuid` and `document_title_en` fields
