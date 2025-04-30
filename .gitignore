@@ -19,10 +19,5 @@ __pycache__/
 *$py.class
 .pytest_cache/
 
-# Task answer files
-documents_answer.csv
-
-data/
-output/
 model_cache/
 .gitkeep
