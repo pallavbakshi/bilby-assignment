@@ -1,0 +1,25 @@
+[project]
+name = "entity-extraction-pipeline-impl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy<2",
+    "apache-airflow==2.10.5",
+    "apache-airflow-providers-docker>=4.3.1",
+    "pandas>=2.2.3",
+    "pyarrow>=19.0.1",
+    "torch==2.2.2",
+    "gliner==0.2.19",
+    "nltk==3.9.1",
+    "transformers==4.51.3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=6.29.5",
+    "ruff>=0.11.6",
+    "pytest",
+    "pytest-mock"
+]

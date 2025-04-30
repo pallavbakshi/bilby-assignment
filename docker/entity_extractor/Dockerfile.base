@@ -1,0 +1,14 @@
+FROM python:3.10-slim
+   
+ENV HF_HOME=/cache
+RUN mkdir -p /cache
+
+WORKDIR /app
+
+# Copy only requirements first to leverage Docker layer caching
+COPY docker/entity_extractor/requirements.txt ./
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Pre-download the GLiNER model to the cache directory
+RUN python -c "from gliner import GLiNER; GLiNER.from_pretrained('urchade/gliner_multi-v2.1')"

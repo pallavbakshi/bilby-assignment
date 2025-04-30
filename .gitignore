@@ -1,0 +1,28 @@
+# Airflow configuration
+airflow.cfg
+airflow.db
+
+.env
+.venv/
+
+# Airflow temporary artifacts
+logs/
+standalone_admin_password.txt
+airflow-webserver.pid
+
+# ruff cache
+.ruff_cache/
+
+# Byte-compiled, optimized, DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Task answer files
+documents_answer.csv
+
+data/
+output/
+model_cache/
+.gitkeep
